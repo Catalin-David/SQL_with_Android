@@ -1,9 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BookActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/emptyStar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_empty_star"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/filledStar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_filled_star"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookName"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:text="Book Name"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:id="@+id/bookImage"
+                app:layout_constraintTop_toBottomOf="@id/bookName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="25dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/bookImage"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/shortDesc"
+                android:text="Short description here"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/shortDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/authorName"
+                android:text="Author name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/authorName"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/pages"
+                android:text="Pages" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/pages"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/language"
+                android:text="Language"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/language"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/longDesc"
+                android:text="Long description here"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
